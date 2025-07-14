@@ -35,29 +35,10 @@ export default defineUserConfig({
       },
     ],
     sidebar: {
-      text: "引导",
-      collapsable: true,
-      children: [
-        {
-          text: "前端累计",
-          link: "/article/",
-        },
-        {
-          text: "学习和总结",
-          link: "/category/",
-        },
-        {
-          text: "Tag",
-          link: "/tag/",
-        },
-        {
-          text: "Timeline",
-          link: "/timeline/",
-        },
-      ],
+      "/": ["", "/guide"],
     },
   }),
-
+  markdown: {},
   plugins: [
     blogPlugin({
       // Only files under posts are articles
@@ -151,5 +132,5 @@ export default defineUserConfig({
   ],
 
   bundler: viteBundler(),
-  base: "/vuepress-starter/",
+  base: "/jiuhao/",
 });
