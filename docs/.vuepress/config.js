@@ -10,8 +10,7 @@ export default defineUserConfig({
   description: "个人博客测试",
 
   theme: defaultTheme({
-    logo: "https://vuejs.press/images/hero.png",
-
+    // logo: "https://vuejs.press/images/hero.png",
     navbar: [
       {
         text: "首页",
@@ -132,5 +131,5 @@ export default defineUserConfig({
   ],
 
   bundler: viteBundler(),
-  base: "/",
+  base: "/jiuhao.github.io/",
 });
