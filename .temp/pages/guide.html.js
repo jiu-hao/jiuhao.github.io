@@ -1,5 +1,5 @@
 import comp from "D:/Mine/vuepress-starter/vuepress-starter/.temp/pages/guide.html.vue"
-const data = JSON.parse("{\"path\":\"/guide.html\",\"title\":\"Guide\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"第一个 VuePress 页面\",\"slug\":\"第一个-vuepress-页面\",\"link\":\"#第一个-vuepress-页面\",\"children\":[]}],\"git\":{},\"filePathRelative\":\"guide.md\",\"excerpt\":\"\\n<p>这是一个说明指导页</p>\\n<h2>第一个 VuePress 页面</h2>\\n\"}")
+const data = JSON.parse("{\"path\":\"/guide.html\",\"title\":\"Guide\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[{\"level\":2,\"title\":\"第一个 VuePress 页面\",\"slug\":\"第一个-vuepress-页面\",\"link\":\"#第一个-vuepress-页面\",\"children\":[]}],\"git\":{\"updatedTime\":1752482321000,\"contributors\":[{\"name\":\"linyanshan\",\"username\":\"linyanshan\",\"email\":\"1294254846@qq.com\",\"commits\":1,\"url\":\"https://github.com/linyanshan\"}],\"changelog\":[{\"hash\":\"6f70d1963c7476859fece8fe1b19f82ad9044436\",\"time\":1752482321000,\"email\":\"1294254846@qq.com\",\"author\":\"linyanshan\",\"message\":\"feat:【VuePress】新增临时文件和页面\"}]},\"filePathRelative\":\"guide.md\",\"excerpt\":\"\\n<p>这是一个说明指导页</p>\\n<h2>第一个 VuePress 页面</h2>\\n\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {
