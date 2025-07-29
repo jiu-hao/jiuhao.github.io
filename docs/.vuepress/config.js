@@ -6,11 +6,12 @@ import { viteBundler } from "@vuepress/bundler-vite";
 export default defineUserConfig({
   lang: "zh-CN",
 
-  title: "Mine Blog",
+  title: "说说予录",
   description: "个人博客测试",
 
   theme: defaultTheme({
     // logo: "https://vuejs.press/images/hero.png",
+    home: "/",
     navbar: [
       {
         text: "首页",
@@ -32,11 +33,57 @@ export default defineUserConfig({
         text: "Timeline",
         link: "/timeline/",
       },
+      {
+        text: "Group",
+        prefix: "/group/",
+        children: [
+          {
+            text: "SubGroup1",
+            prefix: "sub1/",
+            children: [
+              "foo.md", // 解析为 `/guide/group/sub1/bar.md`
+              "bar.md", // 解析为 `/guide/group/sub1/bar.md`
+
+              // 一个外部链接
+              {
+                text: "Example",
+                link: "https://example.com",
+              },
+            ],
+          },
+          {
+            text: "SubGroup2",
+            prefix: "sub2/",
+            // 项目内链接的 .md 或 .html 后缀是可以省略的
+            children: [
+              "foo", // 解析为 `/guide/group/sub2/foo.md`
+              "bar", // 解析为 `/guide/group/sub2/bar.md`
+
+              // 不在 SubGroup2 内的链接
+              "/baz/", // 解析为 `/baz/README.md`
+            ],
+          },
+        ],
+      },
+      {
+        text: "GitHub",
+        link: "https://github.com/jiu-hao/jiuhao.github.io",
+        target: "_blank",
+      },
     ],
     sidebar: {
-      "/": ["", "/guide"],
+      "/": ["/article/", "/category/", "/tag/", "/timeline/"],
+    },
+    externalLinkIcon: true,
+
+    locales: {
+      "/": {
+        lang: "zh-CN",
+      },
     },
   }),
+
+  // theme: "reco",
   markdown: {},
   plugins: [
     blogPlugin({
